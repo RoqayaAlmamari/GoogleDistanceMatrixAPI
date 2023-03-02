@@ -13,11 +13,12 @@ public class GoogleDistanceMatrixAPI {
   public static void main(String[] args) throws JSONException {
 
     // Prompt the user to enter the pickup and dropoff locations
-    Scanner scanner = new Scanner(System.in);
+   // Scanner scanner = new Scanner(System.in);
+    //use args to post pickup and dropoff
     System.out.println("Enter pickup location:");
-    String pickup = scanner.nextLine();
+    String pickup = args[0];
     System.out.println("Enter dropoff location:");
-    String dropoff = scanner.nextLine();
+    String dropoff = args[1];
 
     // Build the URL for the Google Distance Matrix API request
     HttpUrl.Builder urlBuilder = HttpUrl.parse("https://maps.googleapis.com/maps/api/distancematrix/json").newBuilder();
